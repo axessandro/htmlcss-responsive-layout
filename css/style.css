@@ -33,11 +33,33 @@ header .flex-container,
 .jumbo .flex-container,
 #planning .flex-container,
 #testimonials .flex-container,
-#features .flex-container{
+#features .flex-container,
+#about-us .flex-container,
+#get-started .flex-container,
+footer .flex-container{
     width: 95%;
     padding: 1em;
     margin: 0 auto;
 }
+
+/*----- media -----*/
+/* desktop */
+@media screen and (min-width: 992px){
+    header .flex-container,
+    .jumbo .flex-container,
+    #testimonials .flex-container,
+    #features .flex-container,
+    #about-us .flex-container
+    {
+        width: 80%;
+        max-width: 1200px;
+    }
+
+    #get-started .flex-container{
+        width: 30%;
+    }
+}
+/*----- /media -----*/
 
 .card{
     border-radius: 20px;
@@ -59,7 +81,6 @@ header{
     width: 100%;
 }
 
-
 nav i{
     font-size: 1.5rem;
 }
@@ -80,20 +101,7 @@ header .hide-menu{
     color: inherit;
 }
     /* hide-menu */
-
-/*----- media -----*/
-/* desktop */
-@media screen and (min-width: 992px){
-    header .flex-container,
-    .jumbo .flex-container,
-    #testimonials .flex-container{
-        width: 80%;
-        max-width: 1200px;
-    }
-}
-/*----- /media -----*/
 /*********** /HEADER ***********/
-
 
 /* MAIN */
 
@@ -112,9 +120,7 @@ header .hide-menu{
 .jumbo .bag .card{
     width: 100%;
     background-color: var(--parymary-color-light);
-
 }
-
 
 /*----- media -----*/
 /* tablet */
@@ -182,7 +188,6 @@ header .hide-menu{
     margin-bottom: 1em;
 }
 
-
 #testimonials .portrait{
     width: 250px;
     height: 250px;
@@ -203,6 +208,7 @@ header .hide-menu{
 #testimonials .bob{
     background-image: url(../img/testimonial3.jpg);
 }
+
 /*----- media -----*/
 /* tablet */
 @media screen and (min-width: 768px){
@@ -236,7 +242,6 @@ header .hide-menu{
     color: white;
 }
 
-
 #features .flex-container .bag .card{
     background-color: white;
     color: var(--secondary-color);  
@@ -269,4 +274,100 @@ header .hide-menu{
 /*----- /media -----*/
 /*********** FEATURES ***********/
 
+/*********** ABOUT US ***********/
+#about-us .portrait{
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#about-us .flex-container{
+    flex-direction: column;
+}
+
+#about-us .portrait.about{
+    background-image: url(../img/about.jpg);
+    position: relative;
+}
+
+#about-us .portrait.about i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+/*----- media -----*/
+/* tablet */
+@media screen and (min-width: 768px){
+   
+    #about-us .flex-container{
+        flex-direction: row;
+    }
+
+    #about-us .portrait{
+        width: 180px;
+        height: 180px;
+    }
+}
+/*----- /media -----*/
+/*********** /ABOUT US ***********/
+
+/*********** GET START ***********/
+#get-started{
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#get-started .flex-container,
+footer .flex-container{
+    flex-direction: column;
+}
+
+#get-started .flex-container ul{
+    font-size: 0.8rem;
+    list-style-type: disc;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#get-started .flex-container ul li{
+    padding-right: 1.5em;
+}
+
+/*----- media -----*/
+/* tablet */
+@media screen and (min-width: 768px){
+   
+    #get-started .flex-container,
+    footer .flex-container{
+        width: 70%;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 992px){
+   
+    #get-started .flex-container,
+    footer .flex-container{
+        width: 30%;
+    }
+}
+/*----- /media -----*/
+/*********** /GET START ***********/
+
 /* /MAIN */
+
+/* FOOTER */
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer a{
+    color: var(--secondary-color);
+}
+/* /FOOTER */
