@@ -29,6 +29,21 @@ html{
     align-items: center;
 }
 
+header .flex-container,
+.jumbo .flex-container,
+#planning .flex-container{
+    width: 95%;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.card{
+    border-radius: 10px;
+}
+
+.large-b-radius{
+    border-radius: 50px;
+}
 
 /*********** HEADER ***********/
 header{
@@ -41,11 +56,6 @@ header{
     width: 100%;
 }
 
-header .flex-container{
-    width: 95%;
-    padding: 1em;
-    margin: 0 auto;
-}
 
 nav i{
     font-size: 1.5rem;
@@ -76,12 +86,70 @@ header .hide-menu{
         max-width: 1200px;
     }
 }
-
 /*----- /media -----*/
 
 /*********** /HEADER ***********/
 
-/*********** MAIN ***********/
+
+/* MAIN */
+
+/*********** JUMBO ***********/
+.jumbo{
+    padding-top: 6rem;
+}
+
+.jumbo .bag{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    
+}
+
+.jumbo .bag .card{
+    width: 100%;
+    background-color: var(--parymary-color-light);
+}
+
+/*----- media -----*/
+/* tablet */
+@media screen and (min-width: 768px){
+    .jumbo .bag .card{
+        width: calc(100% / 3 - (1.5rem * 2 / 3));
+    }
+    
+    .jumbo .bag .card:first-child{
+        width: calc(100% / 3 * 2 - 1.5rem / 3);
+        display: flex;
+    }
+    
+    .jumbo .bag .card:first-child .text-wrapper{
+        width: 50%
+    }
+}
+/*----- /media -----*/
+/*********** JUMBO ***********/
+
+/*********** PLANNING ***********/
+#planning{
+    background-color: var(--secondary-color);
+}
+
+#planning .flex-container{
+    flex-direction: column;
+}
+
+#planning .strategic-planning{
+    color: white;
+}
+
+#planning .app-development{
+    text-align: center;
+    background-color: white;
+}
+
+/*********** /PLANNING ***********/
 
 
-/*********** /MAIN ***********/
+
+/* /MAIN */
