@@ -17,6 +17,12 @@ img{
     --secondary-color-light: #d5d4f4;
 }
 
+/* spaces */
+:root{
+    --padding-y-4: 4em auto;
+    --padding-4: 4em; 
+}
+
 /* COMMON */
 html{
     font-size: 100%;
@@ -108,6 +114,7 @@ header .hide-menu{
 /*********** JUMBO ***********/
 .jumbo{
     padding-top: 6rem;
+    padding-bottom: 4rem;
 }
 
 .jumbo .bag{
@@ -120,6 +127,38 @@ header .hide-menu{
 .jumbo .bag .card{
     width: 100%;
     background-color: var(--parymary-color-light);
+    text-align: center;
+    padding: 2rem 3rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+
+.jumbo .bag .card i{
+    font-size: 6rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.jumbo .bag .card h3{
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.jumbo .bag .card:first-child{
+    text-align: start;
+    padding-bottom: 0;
+}
+
+.jumbo .bag .card:first-child img{
+    position: relative;
+    bottom: -10px;
+    width: 100%;
+}
+
+.jumbo .bag .card:first-child .img-wrapper{
+    margin: 0 auto;
+    width: 100%;
 }
 
 /*----- media -----*/
@@ -132,13 +171,23 @@ header .hide-menu{
     .jumbo .bag .card:first-child{
         width: calc(100% / 3 * 2 - 1.5rem / 3);
         display: flex;
+        flex-direction: column;
     }
     
     .jumbo .bag .card:first-child .text-wrapper{
-        width: 50%
+        width: 100%
     }
 
     .jumbo .bag .card:first-child img{
+        width: 70%;
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+    }
+
+    .jumbo .bag .card:first-child .img-wrapper{
+        position: relative;
+        height: 100%;
         width: 50%;
     }
 }
