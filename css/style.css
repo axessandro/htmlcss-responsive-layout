@@ -68,6 +68,17 @@ header .hide-menu{
 }
     /* hide-menu */
 
+/*----- media -----*/
+/* desktop */
+@media screen and (min-width: 992px){
+    header .flex-container{
+        width: 80%;
+        max-width: 1200px;
+    }
+}
+
+/*----- /media -----*/
+
 /*********** /HEADER ***********/
 
 /*********** MAIN ***********/
