@@ -32,14 +32,16 @@ html{
 header .flex-container,
 .jumbo .flex-container,
 #planning .flex-container,
-#testimonials .flex-container{
+#testimonials .flex-container,
+#features .flex-container{
     width: 95%;
     padding: 1em;
     margin: 0 auto;
 }
 
 .card{
-    border-radius: 10px;
+    border-radius: 20px;
+    padding: 1em;
 }
 
 .large-b-radius{
@@ -110,6 +112,7 @@ header .hide-menu{
 .jumbo .bag .card{
     width: 100%;
     background-color: var(--parymary-color-light);
+
 }
 
 
@@ -177,16 +180,16 @@ header .hide-menu{
     width: 100%;
     background-color: var(--secondary-color);
     margin-bottom: 1em;
-    padding: 1em;
 }
 
 
 #testimonials .portrait{
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+    margin: 0 auto;
 }
 
 #testimonials .nat{
@@ -210,14 +213,60 @@ header .hide-menu{
         text-align: start;
     }
 
+    #testimonials .portrait{
+        width: 180px;
+        height: 180px;
+    }
+
     #testimonials .card .text-wrapper{
         width: 75%;
     }
-
 }
 /*----- /media -----*/
 /*********** /TESTIMONIALS ***********/
 
+/*********** FEATURES ***********/
+#features{
+    background-color: var(--secondary-color);
+}
 
+#features .flex-container{
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+}
+
+
+#features .flex-container .bag .card{
+    background-color: white;
+    color: var(--secondary-color);  
+}
+
+/*----- media -----*/
+/* tablet */
+@media screen and (min-width: 768px){
+
+    #features .flex-container .bag{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    #features .flex-container .bag .card{
+        width: calc(50% - 1rem); 
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 992px){
+
+    #features .flex-container .bag .card{
+        width: calc(100% / 3 - 1rem); 
+    }
+}
+/*----- /media -----*/
+/*********** FEATURES ***********/
 
 /* /MAIN */
