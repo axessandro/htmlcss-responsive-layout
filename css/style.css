@@ -31,7 +31,8 @@ html{
 
 header .flex-container,
 .jumbo .flex-container,
-#planning .flex-container{
+#planning .flex-container,
+#testimonials .flex-container{
     width: 95%;
     padding: 1em;
     margin: 0 auto;
@@ -81,13 +82,14 @@ header .hide-menu{
 /*----- media -----*/
 /* desktop */
 @media screen and (min-width: 992px){
-    header .flex-container{
+    header .flex-container,
+    .jumbo .flex-container,
+    #testimonials .flex-container{
         width: 80%;
         max-width: 1200px;
     }
 }
 /*----- /media -----*/
-
 /*********** /HEADER ***********/
 
 
@@ -103,13 +105,13 @@ header .hide-menu{
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1.5rem;
-    
 }
 
 .jumbo .bag .card{
     width: 100%;
     background-color: var(--parymary-color-light);
 }
+
 
 /*----- media -----*/
 /* tablet */
@@ -126,6 +128,10 @@ header .hide-menu{
     .jumbo .bag .card:first-child .text-wrapper{
         width: 50%
     }
+
+    .jumbo .bag .card:first-child img{
+        width: 50%;
+    }
 }
 /*----- /media -----*/
 /*********** JUMBO ***********/
@@ -137,6 +143,7 @@ header .hide-menu{
 
 #planning .flex-container{
     flex-direction: column;
+    margin: 0 auto;
 }
 
 #planning .strategic-planning{
@@ -147,8 +154,69 @@ header .hide-menu{
     text-align: center;
     background-color: white;
 }
-
+/*----- media -----*/
+/* desktop */
+@media screen and (min-width: 992px){
+    #planning .flex-container{
+        width: 60%;
+        max-width: 1000px;
+        flex-direction: row;
+    }
+}
+/*----- /media -----*/
 /*********** /PLANNING ***********/
+
+/*********** TESTIMONIALS ***********/
+#testimonials .flex-container{
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+#testimonials .card{
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+
+#testimonials .portrait{
+    width: 180px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#testimonials .nat{
+    background-image: url(../img/testimonial1.jpg);
+}
+
+#testimonials .celia{
+    background-image: url(../img/testimonial2.jpg);
+}
+
+#testimonials .bob{
+    background-image: url(../img/testimonial3.jpg);
+}
+/*----- media -----*/
+/* tablet */
+@media screen and (min-width: 768px){
+    #testimonials .bag .card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: start;
+    }
+
+    #testimonials .card .text-wrapper{
+        width: 75%;
+    }
+
+}
+/*----- /media -----*/
+/*********** /TESTIMONIALS ***********/
 
 
 
