@@ -27,6 +27,7 @@ img{
 html{
     font-size: 100%;
     font-family: 'PT Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .btn{
@@ -47,11 +48,21 @@ html{
     width: 95%;
 }
 
+.blue-btn:hover{
+    background: #0068c9;
+}
+
 .violet-btn{
     background-color: var(--secondary-color);
     color: white;
     width: 60%;
     margin: 2rem 0 1rem;
+}
+
+.violet-btn:hover,
+.circle-btn:hover{
+    color: white;
+    background-color: #7571b4;
 }
 
 .btn a {
@@ -140,7 +151,7 @@ header{
     width: 100%;
 }
 
-nav i{
+header nav i{
     font-size: 1.5rem;
 }
 
@@ -158,6 +169,17 @@ header .hide-menu{
 .hide-menu a{
     text-decoration: none;
     color: inherit;
+}
+
+.hide-menu li:hover:not(li:last-child){
+    background-color: #ffffff1b;
+    border-radius: 20px;
+} 
+
+.hide-menu .btn:hover,
+#get-started .btn:hover{
+    background-color:  #fcc061;
+    color: rgb(255, 255, 255);
 }
     /* hide-menu */
 
@@ -208,13 +230,12 @@ header .hide-menu{
 }
 
 .jumbo .bag .card i{
-    font-size: 6rem;
+    font-size: 5rem;
     color: var(--primary-color);
-   
 }
 
 .jumbo .bag .card .btn i {
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: white;
     margin-bottom: 0;
     margin-right: 0.5rem;
@@ -339,6 +360,10 @@ header .hide-menu{
     vertical-align: middle;
     padding: 1rem;
 }
+
+.circle-btn:hover i{
+    color: white;
+}
 /*----- media -----*/
 /* desktop */
 @media screen and (min-width: 992px){
@@ -346,11 +371,17 @@ header .hide-menu{
         width: 60%;
         max-width: 1000px;
         flex-direction: row;
-        gap: 4rem;
+        justify-content: space-between;
+        gap: 4em;
     }
 
     #planning .app-development{
-        margin-top: 10rem ;
+        margin-top: 10rem;
+        width: 40%;
+    }
+
+    #planning .strategic-planning{
+        width: 60%;
     }
 }
 /*----- /media -----*/
