@@ -59,6 +59,15 @@ html{
     text-decoration: none;
 }
 
+.card{
+    border-radius: 20px;
+    padding: 1em;
+}
+
+.large-b-radius{
+    border-radius: 50px;
+}
+
 .flex-container{
     display: flex;
     justify-content: space-between;
@@ -96,15 +105,6 @@ footer .flex-container{
     }
 }
 /*----- /media -----*/
-
-.card{
-    border-radius: 20px;
-    padding: 1em;
-}
-
-.large-b-radius{
-    border-radius: 50px;
-}
 
 /* typography */
 
@@ -160,6 +160,27 @@ header .hide-menu{
     color: inherit;
 }
     /* hide-menu */
+
+/* media */
+@media screen and (min-width: 992px) {
+    header .hide-menu{
+        display: flex;
+        align-items: center;
+    }
+
+    header nav i:first-child{
+        display: none;
+    }
+
+    header .hide-menu li{
+        padding: 0.5em 1.8em;
+    }
+
+    header .hide-menu .btn{
+        color: black;
+    }
+}
+/* /media */
 /*********** /HEADER ***********/
 
 /* MAIN */
@@ -231,24 +252,47 @@ header .hide-menu{
     .jumbo .bag .card:first-child{
         width: calc(100% / 3 * 2 - 1.5rem / 3);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
     
     .jumbo .bag .card:first-child .text-wrapper{
-        width: 100%
+        width: 70%
     }
 
     .jumbo .bag .card:first-child img{
-        width: 70%;
+        width: 100%;
         position: absolute;
         bottom: 0;
-        left: 30%;
+        left: 10%;
     }
 
     .jumbo .bag .card:first-child .img-wrapper{
         position: relative;
         height: 100%;
-        width: 50%;
+        width: 70%;
+        margin: 0;
+    }
+
+    .jumbo .card .btn{
+        width: 80%;
+        margin: 2rem 0;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 992px){
+    .jumbo .bag .card{
+        width: calc(100% / 3 - (1.5rem * 2 / 3));
+    }
+
+    .jumbo .bag .card:first-child img{
+        width: 80%;
+    }
+    
+    .jumbo .bag .card:first-child{
+        width: calc(100% / 3 * 2 - 1.5rem / 3);
+        display: flex;
+        flex-direction: row;
     }
 }
 /*----- /media -----*/
@@ -302,6 +346,11 @@ header .hide-menu{
         width: 60%;
         max-width: 1000px;
         flex-direction: row;
+        gap: 4rem;
+    }
+
+    #planning .app-development{
+        margin-top: 10rem ;
     }
 }
 /*----- /media -----*/
@@ -377,8 +426,10 @@ header .hide-menu{
     }
 
     #testimonials .card .text-wrapper{
-        width: 75%;
+        width: 65%;
     }
+
+    
 }
 /*----- /media -----*/
 /*********** /TESTIMONIALS ***********/
@@ -493,6 +544,23 @@ header .hide-menu{
    
     #about-us .flex-container{
         flex-direction: row;
+        margin: var(--padding-y-4);
+        align-items: flex-start;
+        gap: 6.5rem;
+    }
+
+    #about-us h1{
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+
+    #about-us h3{
+        font-size: 1.5rem;
+    }
+
+    #about-us .btn{
+        width: 100%;
+        font-size: 0.8rem;
     }
 
     #about-us .portrait{
@@ -571,6 +639,19 @@ footer .flex-container{
     footer .flex-container{
         width: 70%;
     }
+    
+    #get-started h2{
+        padding: 0.5em 0 ;
+    }
+
+    #get-started .free{
+        font-size: 8rem;
+    }
+
+    #get-started .violet-btn{
+        width: 60%;
+    }
+
 }
 
 /* desktop */
@@ -578,7 +659,7 @@ footer .flex-container{
    
     #get-started .flex-container,
     footer .flex-container{
-        width: 30%;
+        width: 50%;
     }
 }
 /*----- /media -----*/
