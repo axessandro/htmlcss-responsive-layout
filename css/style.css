@@ -29,6 +29,36 @@ html{
     font-family: 'PT Sans', sans-serif;
 }
 
+.btn{
+    border-radius: 30px;
+    padding: 0.5em 1.5em;
+    text-align: center;
+}
+
+.white-btn{
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+.blue-btn{
+    background-color: var(--primary-color);
+    color: white;
+    margin: 1em auto;
+    width: 95%;
+}
+
+.violet-btn{
+    background-color: var(--secondary-color);
+    color: white;
+    width: 60%;
+    margin: 2rem 0 1rem;
+}
+
+.btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .flex-container{
     display: flex;
     justify-content: space-between;
@@ -74,6 +104,29 @@ footer .flex-container{
 
 .large-b-radius{
     border-radius: 50px;
+}
+
+/* typography */
+
+h1{
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    padding: 1em 0;
+}
+
+h2{
+    font-size: 2.8rem;
+    padding: 1.5em 0;
+}
+
+h3{
+    font-size: 2rem;
+    padding: 1em 0;
+}
+
+p{
+    line-height: 2rem;
+    font-size: 1.2rem;
 }
 
 /*********** HEADER ***********/
@@ -136,13 +189,20 @@ header .hide-menu{
 .jumbo .bag .card i{
     font-size: 6rem;
     color: var(--primary-color);
-    margin-bottom: 2rem;
+   
+}
+
+.jumbo .bag .card .btn i {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
 }
 
 .jumbo .bag .card h3{
     color: var(--primary-color);
     font-size: 1.7rem;
-    margin-bottom: 2rem;
+   
 }
 
 .jumbo .bag .card:first-child{
@@ -202,15 +262,38 @@ header .hide-menu{
 #planning .flex-container{
     flex-direction: column;
     margin: 0 auto;
+    padding-bottom: var(--padding-4);
 }
 
 #planning .strategic-planning{
     color: white;
+    margin: 4rem auto;
 }
 
 #planning .app-development{
     text-align: center;
     background-color: white;
+}
+
+#planning .app-development p{
+    font-style: italic;
+    padding: 0 1em
+    1em;
+}
+
+.circle-btn{
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin: 1em auto 2em;
+}
+
+.circle-btn i{
+    color: black;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    padding: 1rem;
 }
 /*----- media -----*/
 /* desktop */
@@ -229,12 +312,32 @@ header .hide-menu{
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
+    padding: var(--padding-4);
+}
+
+#testimonials .bag{
+    margin-top: 3em;
+}
+
+#testimonials .bag p{
+    padding: 0.5em 0 1em;
 }
 
 #testimonials .card{
     width: 100%;
     background-color: var(--secondary-color);
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    color: white;
+}
+
+#testimonials .card .text-wrapper .testimonial-name{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#testimonials .card .text-wrapper p i{
+    margin: 0 0.5rem;
+    font-size: 2rem;
 }
 
 #testimonials .portrait{
@@ -285,6 +388,10 @@ header .hide-menu{
     background-color: var(--secondary-color);
 }
 
+#features h2{
+    text-align: center;
+}
+
 #features .flex-container{
     flex-wrap: wrap;
     flex-direction: column;
@@ -294,6 +401,24 @@ header .hide-menu{
 #features .flex-container .bag .card{
     background-color: white;
     color: var(--secondary-color);  
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+#features .number-card{
+    font-size: 4rem;
+    margin-bottom: 1.8rem;
+    font-weight: 700;
+}
+
+#features .benefit{
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#features .card p{
+    color: gray;
 }
 
 /*----- media -----*/
@@ -324,6 +449,15 @@ header .hide-menu{
 /*********** FEATURES ***********/
 
 /*********** ABOUT US ***********/
+#about-us h1{
+    font-size: 3rem;
+}
+
+#about-us p{
+    line-height: 2.8rem;
+    margin-bottom: 3rem;
+}
+
 #about-us .portrait{
     width: 150px;
     height: 150px;
@@ -348,6 +482,11 @@ header .hide-menu{
     font-size: 3rem;
     color: var(--secondary-color);
 }
+
+#about-us h3{
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
 /*----- media -----*/
 /* tablet */
 @media screen and (min-width: 768px){
@@ -370,9 +509,34 @@ header .hide-menu{
     color: white;
 }
 
+#get-started .section-name{
+    color: var(--secondary-color-light);
+}
+
 #get-started .flex-container,
 footer .flex-container{
     flex-direction: column;
+    padding-top: var(--padding-4);
+    text-align: center;
+}
+
+#get-started .free{
+    color: #fcc061;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#get-started p{
+    color: var(--secondary-color-light);
+}
+
+#get-started .white-btn{
+    padding: 1rem;
+    width: 80%;
+    font-size: 1.4rem;
+    margin: 2.5rem 0;
 }
 
 #get-started .flex-container ul{
@@ -380,13 +544,26 @@ footer .flex-container{
     list-style-type: disc;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: var(--padding-4);
 }
 
 #get-started .flex-container ul li{
     padding-right: 1.5em;
 }
 
+#get-started ul li a{
+    color: white;
+
+}
+
 /*----- media -----*/
+/* mobile */
+@media screen and (max-width: 767px){
+    #get-started h2{
+        font-size: 2.5rem;
+        padding: 1rem 0;
+    }
+}
 /* tablet */
 @media screen and (min-width: 768px){
    
@@ -396,7 +573,7 @@ footer .flex-container{
     }
 }
 
-/* tablet */
+/* desktop */
 @media screen and (min-width: 992px){
    
     #get-started .flex-container,
@@ -418,5 +595,14 @@ footer{
 
 footer a{
     color: var(--secondary-color);
+}
+
+footer p{
+    margin-bottom: 6rem;
+}
+
+footer span{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 /* /FOOTER */
